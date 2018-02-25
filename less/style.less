@@ -1,0 +1,107 @@
+//fonctions less
+.sections(){
+	display: inline-block;
+	margin: 0;
+	width: 48%;
+	height: 200px;
+}
+.divisions(){
+	margin: 20px;
+	padding: 1%;
+	overflow: hidden;
+	text-align: center;
+}
+
+//général
+body{
+	margin: auto;
+	width: 1090px;
+	background-color: #333;
+	font-family: 'Open Sans';
+}
+h1{
+	font-size: 40px;
+}
+
+//interface - message et sélection
+#intro{
+	.divisions();
+	height:250px;
+	color: white;
+	background-image: url('../img/bg.jpg');
+	background-size: 150px;
+	animation: deplacementBgIntro 15s linear infinite;
+	section{
+		.sections();
+		background-color: rgba(0,0,0,0.3);
+	}
+	#message{
+		height:80%; 
+		line-height: 120%;
+	}
+	#inputs{
+		margin-left: 10%;
+		bottom: 10px;
+		button{
+			width: 110px;
+		}
+	}
+}
+
+@keyframes deplacementBgIntro{
+	0%{background-position: 0%;}
+	100%{background-position: 100%;}
+}
+
+//interface - meilleurs scores
+h2{
+	font-size: 24px;
+	text-align: center;
+	margin: 2%;
+}
+table{
+	margin: auto;
+	display: inline-block;
+	td{
+		padding: 1px 8px 1px 8px;
+		.scoreTemps{
+			text-align: right;
+		}
+	}
+}
+
+//interface - jeu
+#jeu{
+	.divisions();
+	background-color: #aaa;
+	section{
+		.sections();
+		position: relative;
+		height: 500px;
+	}
+	//pieces
+	#melangePieces{
+		float: left;
+	}
+	.pieces{
+		z-index: 2;
+	}
+	//grille
+	#conteneurGrille{
+		position: relative;
+		margin: auto;
+		border: 5px solid #444;
+		border-radius: 7px;
+	}
+	.cases{
+		box-shadow: 0 0 1px black inset;
+	}
+	#minuterie{
+		padding: 1%;
+		position: relative;
+		display: inline-block;
+		margin: auto;
+		text-align: center;
+		float: right;
+	}
+}

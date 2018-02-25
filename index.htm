@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Giguere Maxime TP2</title>
+	<meta charset='utf-8'>
+
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:600,800' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<script src="http://code.jquery.com/jquery-2.1.4.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+	<script type="text/javascript" src='scripts/Grille.class.js'></script>
+	<script type="text/javascript" src='scripts/Puzzle.class.js'></script>
+	<script type="text/javascript" src='scripts/Score.class.js'></script>
+	<script type="text/javascript" src='scripts/InterfaceJeu.class.js'></script>
+	<script type="text/javascript" src='scripts/Jeu.class.js'></script>
+	<script type="text/javascript" src='scripts/application.js'></script>
+</head>
+<body>
+	<div id='intro'>
+		<h1>Casse-Tête</h1>
+		<section>
+			<div id='message'></div>
+			<div id='inputs'>
+				<span>Niveau de difficulté</span>
+				<select id='difficulte'>
+					<option>Débutant</option>
+					<option>Intermédiaire</option>
+					<option>Difficile</option>
+					<option>Expert</option>
+					<option>Lunatique</option>
+				</select>
+				<button id='jouerBtn'></button>
+			</div>
+		</section>
+		<section>
+			<h2 id='scoresNiv'>Meilleurs temps</h2>
+			<table id='scores'></table>
+		</section>
+	</div>
+	<div id='jeu'>
+		<section id='melangePieces'>
+			<div id='conteneurPieces'></div>
+		</section>
+		<section id='HUD'>
+			<div id='conteneurGrille'></div>
+			<h4 id='minuterie'></h4>
+		</section>
+	</div>
+</body>
+</html>
